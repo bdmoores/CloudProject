@@ -31,9 +31,12 @@ UI<-fluidPage(
                 value = 2.5,
                 step = 0.1),
     
-    numericInput(inputId ="odometer",
+    sliderInput(inputId ="odometer",
                 "Vehicle Odometer Reading:",
-                value = 120000),
+                min = 1000,
+                max = 250000,
+                value = 100000,
+                step = 1000),
     
     numericInput(inputId ="mmr",
                 "Vehicles MMR Index:",

@@ -34,7 +34,7 @@ shinyServer(function(input, output) {
                          mmr= numeric(),
                          stringsAsFactors = FALSE)
         #predict car value from model
-        testVal[1,]<- list((4005-input$year), input$condition, input$odometer,input$mmr)
+        testVal[1,]<- list((4005-input$year), input$condition, (250000-input$odometer),input$mmr)
         testpred<- trunc(predict(lm_pred, newdata = testVal))
 
 
